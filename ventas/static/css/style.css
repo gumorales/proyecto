@@ -1,7 +1,97 @@
+/*estilos generales*/
 body{
     padding: 0;
     margin: 0;
 }
-.header{
+.row{
+    margin: 0;
+}
+.header {
+    position: sticky; 
+    top: 0;
+    height:auto;
+    z-index: 20;
+    padding: 0;
+    border:1px solid  black;
+   
+    
+}
+.logo{
     position: relative;
+    
+    height: 80px;
+    width: 150px;
+}
+ul { 
+    text-align: center;
+    position: relative;
+    list-style-type: none;
+    margin: auto;
+    padding: 0;
+      
+}
+
+li {
+   
+    text-align: center;
+    padding: 10px 15px;
+    font-size: 15px;
+    
+  
+}
+
+.menu{
+    display: inline-block;
+}
+@media only screen and (max-width: 768px){
+    .menu{
+        display: block;
+    }
+}
+
+
+.menu{
+    display: inline-block;
+}
+.web{
+    width: 40px;
+    height: 40px;
+}
+.center{
+    text-align: center;
+}
+/*estilos formulario*/
+form input{
+    background-color:rgb(124,222,174) ;
+    border: 5px solid red;
+    text-align: center;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    width: 80%;
+}
+
+form textarea{
+    margin: 0 ,auto;
+    height: 40px;
+    width: 90%;
+   
+    background-color:rgb(124,222,174) ;
+    border: 5px solid red;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+:focus {
+    outline: -webkit-focus-ring-color auto 0px!important;
+}
+.formulario{
+    margin-top: 20px;
+    padding: 0;
+    text-align: center;
+}
+
+.carrusel{
+    width: 100px;
+    height: 100px;
 }

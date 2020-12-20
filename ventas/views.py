@@ -1,7 +1,29 @@
 from django.shortcuts import render
-from .models import Post
+from django.utils import timezone
+from .models import consulta
+from .forms import PostForm
+from django.shortcuts import redirect
+
+
 # Create your views here.
-def inicio(request):
-    
-    posts = Post.objects.filter()
-    return render(request, 'ventas/inicio.html', {'posts':posts})
+def principal(request):
+    return render(request, 'ventas/principal.html', {})
+
+
+def formulario(request):
+    form = PostForm()
+    return render(request, 'ventas/formulario.html', {'form': form})
+        
+
+def post_new(request):
+    if request.method == "POST":
+        form = PostForm(request.POST)
+        if form.is_valid():
+            post = form.save(commit=False)
+            post.author = request.user
+            post.published_date = timezone.now()
+            post.save()
+            return redirect('/', pk=post.pk)
+    else:
+        form = PostForm()
+    return render(request, 'ventas/formulario.html', {'form': form})    

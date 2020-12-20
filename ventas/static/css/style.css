@@ -8,13 +8,16 @@ body{
 }
 .header {
     position: sticky; 
+    background-color: rgb(25, 38, 68);
     top: 0;
     height:auto;
     z-index: 20;
     padding: 0;
     border:1px solid  black;
-   
-    
+}
+.header a{
+    color:white;
+    text-decoration: none !important;
 }
 .logo{
     position: relative;

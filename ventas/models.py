@@ -25,3 +25,11 @@ class consulta(models.Model):
 
     def __str__(self):
         return self.Rut
+
+class Prodcto(models.Model):
+    Titulo = models.CharField(max_length=50)
+    Imagen = models.TextField()
+    Precio = models.CharField(max_length=15)
+    
+    def __str__(self):
+        return self.Titulo

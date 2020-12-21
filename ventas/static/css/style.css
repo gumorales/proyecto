@@ -108,3 +108,58 @@ form textarea{
 h4{
     color: white;
 }
+
+/* Productos */
+.ofertas{
+    background: white;
+    padding-top: 30px;
+}
+.ofertas-titulo{
+    border: 2px solid black;
+    padding: 10px;
+    text-align: center;
+    width: 35%;
+    margin: auto; 
+}
+.ofertas-titulo h2{
+    font-size: 40px;
+    color: black;
+    font-weight: normal;
+}
+.ofertas-titulo hr{
+    background: black;
+    width: 50%;
+    margin: 10px auto;
+}
+.container-ofertas{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.productos{
+    padding: 30px;
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.productos .producto{
+    width: 30%;
+    background: #8A7975;
+    color: black;
+    border-radius: 10px;
+    padding: 35px 35px 0 35px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.productos .producto img{
+    width: 95%;
+    height: 70%;
+    display: block;
+    margin: auto;   
+}
+
+.productos .producto p{
+    color: black;
+    font-weight: 300;
+}

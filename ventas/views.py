@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.utils import timezone
-from .models import consulta
+from .models import consulta, Prodcto
+from .models import Prodcto
 from .forms import PostForm
 from django.shortcuts import redirect
 
@@ -27,3 +28,7 @@ def post_new(request):
     else:
         form = PostForm()
     return render(request, 'ventas/formulario.html', {'form': form})    
+
+def productos_list(request):
+    productos = Prodcto.objects.order_by('Titulo')
+    return render(request, 'ventas/productos_list.html', {'productos': productos})

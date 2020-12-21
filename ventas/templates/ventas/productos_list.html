@@ -1,0 +1,17 @@
+{% extends 'ventas/principal.html' %}
+
+{% block content %}
+
+    <div class="container-ofertas">
+        <section class="productos">
+            {% for producto in productos %}
+            <div class="producto">
+                <h1>{{ producto.Titulo }}</h1>
+                <img src="{{ producto.Imagen }}" alt="">
+                <p>{{ producto.Precio }}</p>
+            </div>
+            {% endfor %}
+        </section>
+    </div>
+    
+{% endblock %}
